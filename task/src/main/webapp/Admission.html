@@ -46,26 +46,28 @@
   </div>
 </nav>
 
-<h1>Cricket Ticket Book</h1>
-<form action="Book" method="post">
+<h1>Addmission form</h1><br>
+<form action="addmit" method="post">
 <pre>
-GroundName<input type="text" name="gname"><br>
-CustomerName<input type="text" name="cName"><br>
-CustomerEmail<input type="text" name="cEmail"><br>
-SeatType<select name="seat">
+Name<input type="text" name="name"><br>
+Email<input type="text " name="email"><br>
+PhoneNumber<input type="number" name="number"><br>
+Address<input type="text" name="address"><br>
+FatherName<input type="text" name="fatherName"><br>
+MotherName<input type="text" name="motherName"><br>
+Percentage<input type="text" name="percentage"><br>
+Course<select name="course">
 <option>select</option>
-<option>General Admission</option>
-<option>Pavilion Seats</option>
-<option>Executive</option>
-<option>Club Level Seats</option>
-<option>Ground-Level Seats</option>
+<option>BE</option>
+<option>BCA</option>
+<option>MCA</option>
+<option>MBA</option>
+<option>Bcom</option>
 </select><br>
-NumberOfTicket<input type="number" name="noOfTicket"><br>
-<input type="submit" value="BookTicket">
+Age<input type="number" name="age"><br>
+<input type="submit" value="submit">
 </pre>
 </form>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>
