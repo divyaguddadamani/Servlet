@@ -3,6 +3,7 @@ package com.xworkz.java.servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -53,6 +54,10 @@ public class College extends HttpServlet {
 			System.out.println("details are invalid");
 			
 		}
+		
+        arg0.setAttribute("studentName", name);
+        RequestDispatcher dispatcher = arg0.getRequestDispatcher("/College.jsp");
+        dispatcher.forward(arg0, arg1);
 		
 		
 		

@@ -3,6 +3,7 @@ package com.xworkz.java.servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -41,6 +42,10 @@ public class Cricket extends HttpServlet {
 	        } else {
 	        	System.out.println("Booking failed ");
 	        }
+
+	        arg0.setAttribute("CustomerName", customername);
+	        RequestDispatcher dispatcher = arg0.getRequestDispatcher("/Cricket.jsp");
+	        dispatcher.forward(arg0, arg1);
 		}
 
 }

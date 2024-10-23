@@ -3,6 +3,7 @@ package com.xworkz.java.servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -41,6 +42,9 @@ public class Concert  extends HttpServlet{
         	System.out.println(" invalid details");
         }
 		
+        arg0.setAttribute("ArtistName", artistname);
+        RequestDispatcher dispatcher = arg0.getRequestDispatcher("/Concert.jsp");
+        dispatcher.forward(arg0, arg1);
 		}
 
 }

@@ -3,6 +3,7 @@ package com.xworkz.java.servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -47,5 +48,9 @@ public class Movie extends HttpServlet {
 	        } else {
 	    		System.out.println(" invalid details.");
 	        }
+
+	        arg0.setAttribute("Moviename", name);
+	        RequestDispatcher dispatcher = arg0.getRequestDispatcher("/Movie.jsp");
+	        dispatcher.forward(arg0, arg1);
 	}
 }
