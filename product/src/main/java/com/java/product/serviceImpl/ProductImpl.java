@@ -1,8 +1,9 @@
 package com.java.product.serviceImpl;
 
 import com.java.product.dto.ProductDto;
+import com.java.product.repoImpl.ProductRepoImpl;
+import com.java.product.repository.ProductRepo;
 import com.java.product.service.ProductService;
-
 public class ProductImpl implements ProductService{
 
 	@Override
@@ -56,6 +57,23 @@ public class ProductImpl implements ProductService{
 			}
 			
 		}
+		if(valid)
+		 {
+			 System.out.println("save data into db");
+			 ProductRepo repo=new ProductRepoImpl();
+			 int pk=repo.save(dto);
+			 if(pk>0)
+			 {   valid=true;
+				 System.out.println("data saved into db");
+				 
+			 }
+			 else
+			 {		valid=false;
+				 System.out.println("data is not saved");
+			 }
+		 }
+		
+	
 		
 		return valid;
 	}
